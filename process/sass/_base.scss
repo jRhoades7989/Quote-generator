@@ -1,11 +1,20 @@
 body {
+    display: flex;
+    align-items: center;
     font-family: 'Montserrat', sans-serif;
     background-color: $background-color-1;
+    padding: 5%;
+    margin: 0 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+main {
+    margin: auto;
 }
 
 blockquote {
-    margin: auto auto;
-    flex: 0 0 0 100%;
+    font-size: 2.6em;
 }
 
 button {
@@ -22,13 +31,11 @@ button {
     }
 }
 
-.container {
-    height: 95vh;
+.flex-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 5%;
     box-sizing: border-box;
-    }
+}
 
 
