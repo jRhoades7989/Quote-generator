@@ -1,0 +1,1 @@
+var Jquery = require('jquery');
