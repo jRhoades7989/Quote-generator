@@ -22,6 +22,7 @@ gulp.task('compass', function() {
     gulp.src(sassSources)
         .pipe(compass({
             sass: 'process/sass',
+            cache_location: 'build/development/css',
             style: 'expanded'
             }
         ))
