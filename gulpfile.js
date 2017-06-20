@@ -29,3 +29,5 @@ gulp.task('compass', function() {
         .on('error', gutil.log)
         .pipe(gulp.dest('build/development/css'))
         });
+
+ gulp.task('default', ['js', 'compass']);
