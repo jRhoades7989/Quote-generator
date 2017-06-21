@@ -449,3 +449,16 @@ button:hover {
   flex-direction: column;
   box-sizing: border-box;
 }
+
+.quote-button-container {
+  flex: 0 0 25%;
+  margin-left: 25%;
+}
+
+.twitter-button-container {
+  flex: 0 0 25%;
+}
+
+#button-container {
+  flex-direction: row;
+}

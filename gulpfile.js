@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 var jsSources = [
     'process/scripts/scripts.js'
-    ];
+];
 
 var sassSources = ['process/sass/styles.scss'];
 
@@ -16,7 +16,7 @@ gulp.task('js', function() {
         .pipe(concat('scripts.js'))
         .pipe(browserify())
         .pipe(gulp.dest('build/development/js'))
-        });
+});
 
 gulp.task('compass', function() {
     gulp.src(sassSources)
@@ -24,10 +24,16 @@ gulp.task('compass', function() {
             sass: 'process/sass',
             cache_location: 'build/development/css',
             style: 'expanded'
-            }
+        }
         ))
         .on('error', gutil.log)
         .pipe(gulp.dest('build/development/css'))
-        });
+});
 
- gulp.task('default', ['js', 'compass']);
+gulp.task('watch', function() {
+    gulp.watch(jsSources, ['js']);
+    gulp.watch('process/sass/*.scss', ['compass']);
+});
+
+gulp.task('default', ['watch']);
+
