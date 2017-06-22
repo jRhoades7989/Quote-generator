@@ -41,22 +41,22 @@ gulp.task('js', function() {
         .pipe(browserify())
         .pipe(gulpif(env === 'production', uglify()))
         .pipe(gulp.dest(outputDir + '/js'))
-        .pipe(connect.reload().on('error', function(e) {
-            console.log(e);}));
+        .pipe(connect.reload());
 });
 
 gulp.task('compass', function() {
     gulp.src(sassSources)
         .pipe(compass({
+            css: outputDir + 'css',
             sass: 'process/sass',
             cache_location: outputDir + 'css',
-            style: sassStyle
+            style: sassStyle,
+            sourcemap: true
         }
         ))
         .on('error', gutil.log)
         .pipe(gulp.dest(outputDir + 'css'))
-        .pipe(connect.reload().on('error', function(e) {
-        console.log(e); }));
+        .pipe(connect.reload());
 });
 
 gulp.task('html', function() {
