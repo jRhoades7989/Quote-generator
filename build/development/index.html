@@ -5,21 +5,15 @@
     <title>Random Quote Generator</title>
     <link rel = "stylesheet" href = "css/styles.css" />
 </head>
-<body>
-    <main>
-        <div id = "quote-container" class = "flex-container">
-            <blockquote>"This quote is the best quote"</blockquote>
-            <p class = "author">Johnathan Rhoades</p>
-            <div class = "quote-button-container">
-                <button id = "quote-generator">New Quote</button>
-            </div>
-        </div>
-        <div class = "button-container">
-            <div class = "twitter-button-container">
-                <a href = "#"><button id = "twitter"></button></a>
-            </div>
-        </div>
+<body>    <main>
+        <blockquote id = "quote"><!--[if IE]>
+            <p>GO GET A REAL BROWSER!!!! kthanksbye</p>
+            <![endif]-->
+        "This quote is the best quote"</blockquote>
+        <p id = "author">Johnathan Rhoades</p>
+        <button id = "quote-generator">New Quote</button>
+        <a href = "#" id = "twitter" ><img src = "img/twitter.png"></img></a>
     </main>
-    <script src = "js/scripts.js"></script>
+    <!--[if !IE]--><script src = "js/scripts.js"></script><!--[endif]-->
 </body>
 </html>
