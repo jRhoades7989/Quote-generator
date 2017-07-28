@@ -24,10 +24,10 @@ if (env === 'development') {
 } else {
     outputDir = 'build/production/';
     sassStyle = 'compressed';
-};
+}
 
 jsSources = [
-    'process/scripts/scripts.js'
+    'process/scripts/jquery-3.2.1.js', 'process/scripts/scripts.js'
 ];
 
 sassSources = ['process/sass/styles.scss'];

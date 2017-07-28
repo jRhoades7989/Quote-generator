@@ -38,11 +38,26 @@ button {
     text-align: center;
 }
 
+#quote p::before {
+    content: '“';
+    margin-right: 0.2em;
+}
+
+#quote p::after {
+    content: '”';
+    margin-left: 0.2em;
+}
+
 #author {
     color: $author-font-color;
     flex: 0 0 100%;
     text-align: right;
     margin-bottom: 2em;
+}
+
+#author::before {
+  content: '—';
+  margin-right: 0.3em;
 }
 
 #quote-generator {
@@ -71,7 +86,7 @@ button {
     align-self: flex-start;
     max-height: 50px;
     max-width: 50px;
-    background: url("../img/twitter.png") center/cover no-repeat;
+    background: url("https://user-images.githubusercontent.com/28717999/28549259-d747ec26-70a6-11e7-924e-fa843831204c.png") center/cover no-repeat;
     transition: ease 0.2s;
     filter: grayscale(100%);
 
